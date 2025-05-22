@@ -41,4 +41,12 @@ public class UserController {
 
         return "selectionExpression";
     }
+
+    //handler method to handle -> Message Expression
+    // http://localhost:8080/messageExpression
+    @GetMapping("/messageExpression")
+    public String messageExpression(){
+
+        return "messageExpression";
+    }
 }
