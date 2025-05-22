@@ -1,9 +1,26 @@
+/* Base styles */
 body {
-    background-color: powderblue;
+    background-color: #f0f8ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
 }
+
+/* Heading styles */
 h1 {
-    color: blue;
+    color: #1e90ff;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
 }
+
+/* Paragraph styles */
 p {
-    color: red;
+    color: #555;
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 15px;
+    text-align: justify;
 }
