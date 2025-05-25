@@ -67,4 +67,40 @@ public class UserController {
 
         return "fragmentExpression";
     }
+
+    //handler method to handle -> User
+    // http://localhost:8080/user
+    @GetMapping("/user")
+    public String user(Model model){
+
+        User AdminUser = User.builder()
+                .name("Zubair Admin")
+                .email("zubairadmin@gmail.com")
+                .role("ADMIN")
+                .gender("Male")
+                .build();
+
+        User user1 = User.builder()
+                .name("Mazumder")
+                .email("mazumder@gmail.com")
+                .role("USER")
+                .gender("Male")
+                .build();
+
+        User user2 = User.builder()
+                .name("Shariar")
+                .email("shariar@gmail.com")
+                .role("USER")
+                .gender("Male")
+                .build();
+
+        List<User> userListInformation = new ArrayList<>();
+        userListInformation.add(AdminUser);
+        userListInformation.add(user1);
+        userListInformation.add(user2);
+
+        model.addAttribute("userListInformation", userListInformation);
+
+        return "user";
+    }
 }
