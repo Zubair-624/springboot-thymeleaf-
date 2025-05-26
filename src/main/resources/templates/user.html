@@ -11,6 +11,12 @@
 
     <thead>
         <tr>
+            <th>SR. No</th>
+            <th>Index</th>
+            <th>Even</th>
+            <th>Odd</th>
+            <th>First</th>
+            <th>Last</th>
             <th>Name</th>
             <th>Email</th>
             <th>Role</th>
@@ -19,7 +25,13 @@
     </thead>
 
     <tbody>
-        <tr th:each="userListInformation : ${userListInformation}">
+        <tr th:each="userListInformation, userStatus : ${userListInformation}">
+            <td th:text="${userStatus.count}"></td>
+            <td th:text="${userStatus.index}"></td>
+            <td th:text="${userStatus.even}"></td>
+            <td th:text="${userStatus.odd}"></td>
+            <td th:text="${userStatus.first}"></td>
+            <td th:text="${userStatus.last}"></td>
             <td th:text="${userListInformation.name}"></td>
             <td th:text="${userListInformation.email}"></td>
             <td th:text="${userListInformation.role}"></td>
