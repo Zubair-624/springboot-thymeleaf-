@@ -103,4 +103,40 @@ public class UserController {
 
         return "user";
     }
+
+    //handler method to handle -> If Unless
+    // http://localhost:8080/ifUnless
+    @GetMapping("/ifUnless")
+    public String ifUnless(Model model){
+
+        User AdminUser = User.builder()
+                .name("Zubair Admin")
+                .email("zubairadmin@gmail.com")
+                .role("ADMIN")
+                .gender("Male")
+                .build();
+
+        User user1 = User.builder()
+                .name("Mazumder")
+                .email("mazumder@gmail.com")
+                .role("USER")
+                .gender("Male")
+                .build();
+
+        User user2 = User.builder()
+                .name("Shariar")
+                .email("shariar@gmail.com")
+                .role("USER")
+                .gender("Male")
+                .build();
+
+        List<User> user = new ArrayList<>();
+        user.add(AdminUser);
+        user.add(user1);
+        user.add(user2);
+
+        model.addAttribute("user", user);
+
+        return "ifUnless";
+    }
 }
