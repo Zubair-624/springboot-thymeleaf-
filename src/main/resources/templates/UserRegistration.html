@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+</head>
+<body>
+
+<div align="center">
+
+  <form role="form" method="post" th:action="@{/registration/save}" th:object="${userForm}">
+
+    <div>
+      <label>Full Name</label>
+      <input type="text" th:field="*{name}">
+    </div>
+
+
+  </form>
+
+</div>
+
+</body>
+</html>
